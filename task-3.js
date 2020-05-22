@@ -1,9 +1,7 @@
 const findBestEmployee = function (employees) {
-  for (const sales of Object.values(employees)) {
-    if (Object.values(employees).sales === Math.max(sales)) {
-      return Object.keys(employees);
-    }
-  }
+  return Object.keys(employees)[
+    Object.values(employees).indexOf(Math.max(...Object.values(employees)))
+  ];
 };
 
 console.log(
